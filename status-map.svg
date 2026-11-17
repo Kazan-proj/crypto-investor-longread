@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Четыре контрольные записи</title>
+  <desc id="desc">Банк списал рубли, посредник отразил доступную сумму, сделка исполнена, цифровой депозитарий учёл актив. Между записями нужны отдельные проверки.</desc>
+  <rect width="1200" height="360" fill="#e4ece9"/>
+  <path d="M265 172H333M565 172H633M865 172H933" stroke="#7c9a9c" stroke-width="3"/>
+  <path d="M324 164l10 8-10 8M624 164l10 8-10 8M924 164l10 8-10 8" fill="none" stroke="#7c9a9c" stroke-width="3"/>
+  <g font-family="Arial, sans-serif">
+    <rect x="35" y="87" width="230" height="170" rx="10" fill="#fffefa" stroke="#b8c9c5"/>
+    <rect x="335" y="87" width="230" height="170" rx="10" fill="#fffefa" stroke="#b8c9c5"/>
+    <rect x="635" y="87" width="230" height="170" rx="10" fill="#fffefa" stroke="#b8c9c5"/>
+    <rect x="935" y="87" width="230" height="170" rx="10" fill="#fffefa" stroke="#b8c9c5"/>
+    <g fill="#bf724d" font-size="17" font-weight="700">
+      <text x="58" y="119">01 / БАНК</text>
+      <text x="358" y="119">02 / ПОСРЕДНИК</text>
+      <text x="658" y="119">03 / СДЕЛКА</text>
+      <text x="958" y="119">04 / УЧЁТ</text>
+    </g>
+    <g fill="#172530" font-size="24" font-weight="700">
+      <text x="58" y="164">Рубли</text><text x="58" y="194">списаны</text>
+      <text x="358" y="164">Сумма</text><text x="358" y="194">доступна</text>
+      <text x="658" y="164">Исполнение</text><text x="658" y="194">подтверждено</text>
+      <text x="958" y="164">Актив</text><text x="958" y="194">зачислен</text>
+    </g>
+    <g fill="#66797b" font-size="15">
+      <text x="58" y="231">платёжная запись</text>
+      <text x="358" y="231">запись о средствах</text>
+      <text x="658" y="231">торговая запись</text>
+      <text x="958" y="231">цифровой счёт</text>
+    </g>
+  </g>
+  <text x="34" y="327" fill="#66797b" font-family="Arial, sans-serif" font-size="16">Типовая архитектурная модель · не интерфейс конкретной платформы</text>
+</svg>
