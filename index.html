@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172530">
+  <meta name="description" content="Интерактивный лонгрид о том, как рубли проходят через банк, брокера или криптообменник и превращаются в учитываемый цифровой актив. Россия и сравнение с MiCA.">
+  <title>От банковского счёта до криптовалюты — интерактивный лонгрид</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к материалу</a>
+  <div class="reading-progress" aria-hidden="true"><span id="progress-bar"></span></div>
+
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="К началу материала">
+      <span class="wordmark-mark" aria-hidden="true">↗</span>
+      <span>МАРШРУТ АКТИВА</span>
+    </a>
+    <nav class="header-nav" aria-label="Основная навигация">
+      <a href="#route">Маршрут</a>
+      <a href="#comparison">Россия и ЕС</a>
+      <a href="#sources">Источники</a>
+    </nav>
+    <a class="header-index" href="#contents">Оглавление <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero section-shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Интернет-технологии · банковское дело и биржи</p>
+        <h1 id="hero-title">От банковского счёта<br><em>до криптовалюты</em></h1>
+        <p class="hero-lead">Что происходит между списанием рублей и записью о приобретённом активе? Проследим путь инвестора через банк, посредника, сделку и цифровой учёт.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#route">Пройти маршрут <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#method">Что именно показано <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero-meta">Учебная модель · Россия и практика ЕС · сведения проверены 17 ноября 2026 года</p>
+      </div>
+      <div class="hero-visual" aria-label="Схематическое движение: банковский счёт, два пути покупки, цифровой учёт, продажа и возврат рублей">
+        <svg viewBox="0 0 620 540" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+          <title id="hero-svg-title">Два пути от рублей к криптовалюте</title>
+          <desc id="hero-svg-desc">От банковского счёта маршрут расходится на покупку через брокера и организатора торгов и покупку у криптообменника, затем сходится на учёте и возвращается к банковскому счёту после продажи.</desc>
+          <defs>
+            <linearGradient id="hero-glow" x1="0" x2="1"><stop stop-color="#a8c7ca"/><stop offset="1" stop-color="#cc8d68"/></linearGradient>
+            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#b8c5c4"/></marker>
+          </defs>
+          <path class="diagram-line" d="M310 110 V155 M310 155 L146 206 M310 155 L474 206 M146 274 L310 347 M474 274 L310 347 M310 412 V458" fill="none" stroke="#b8c5c4" stroke-width="2" marker-end="url(#arrowhead)"/>
+          <circle cx="310" cy="155" r="5" fill="#d9a17a"/>
+          <rect x="195" y="34" width="230" height="76" rx="14" class="diagram-node main"/>
+          <text x="310" y="66" text-anchor="middle" class="diagram-label">БАНКОВСКИЙ СЧЁТ</text>
+          <text x="310" y="89" text-anchor="middle" class="diagram-sub">рубли инвестора</text>
+          <rect x="42" y="206" width="208" height="68" rx="14" class="diagram-node"/>
+          <text x="146" y="235" text-anchor="middle" class="diagram-label">БРОКЕР + ТОРГИ</text>
+          <text x="146" y="256" text-anchor="middle" class="diagram-sub">заявка и сделка</text>
+          <rect x="370" y="206" width="208" height="68" rx="14" class="diagram-node"/>
+          <text x="474" y="235" text-anchor="middle" class="diagram-label">КРИПТООБМЕННИК</text>
+          <text x="474" y="256" text-anchor="middle" class="diagram-sub">обмен с контрагентом</text>
+          <rect x="195" y="347" width="230" height="66" rx="14" class="diagram-node main"/>
+          <text x="310" y="374" text-anchor="middle" class="diagram-label">ЦИФРОВОЙ УЧЁТ</text>
+          <text x="310" y="397" text-anchor="middle" class="diagram-sub">запись об активе</text>
+          <rect x="195" y="458" width="230" height="58" rx="14" class="diagram-node"/>
+          <text x="310" y="491" text-anchor="middle" class="diagram-label">ПРОДАЖА → РУБЛИ</text>
+          <text x="29" y="173" class="diagram-side">ВЕТВЬ А</text>
+          <text x="507" y="173" class="diagram-side">ВЕТВЬ Б</text>
+        </svg>
+        <p class="visual-caption">Движение показано условно. Этапы и участники зависят от правовой и договорной модели.</p>
+      </div>
+    </section>
+
+    <div class="status-note section-shell">
+      <span class="status-note-label">Контекст на дату публикации</span>
+      <p>Банк России сообщил, что организаторы торгов смогут запускать торги цифровыми валютами <strong>с 22 ноября 2026 года</strong> после согласования правил. Первые цифровые депозитарии и криптообменники были внесены в реестры в октябре. Эти сообщения не подтверждают существование единого сервиса, который уже выполняет все шаги изображённого ниже пути. <a href="https://www.cbr.ru/press/event/?id=32972" target="_blank" rel="noopener noreferrer">Банк России, 11.11.2026 ↗</a> <a href="https://www.cbr.ru/press/event/?id=32894" target="_blank" rel="noopener noreferrer">Банк России, 06.10.2026 ↗</a></p>
+    </div>
+
+    <section class="contents section-shell" id="contents" aria-labelledby="contents-title">
+      <div class="section-label"><span>00</span><span>Навигация</span></div>
+      <div class="contents-body">
+        <h2 id="contents-title">Содержание</h2>
+        <ol class="contents-list">
+          <li><a href="#terms"><span>01</span> Что именно покупают <span aria-hidden="true">↗</span></a></li>
+          <li><a href="#actors"><span>02</span> Кто участвует <span aria-hidden="true">↗</span></a></li>
+          <li><a href="#route"><span>03</span> Путь инвестора <span aria-hidden="true">↗</span></a></li>
+          <li><a href="#technology"><span>04</span> Что делают интернет-технологии <span aria-hidden="true">↗</span></a></li>
+          <li><a href="#comparison"><span>05</span> Россия и MiCA <span aria-hidden="true">↗</span></a></li>
+          <li><a href="#cases"><span>06</span> Что показывает практика <span aria-hidden="true">↗</span></a></li>
+          <li><a href="#conclusion"><span>07</span> Выводы и источники <span aria-hidden="true">↗</span></a></li>
+        </ol>
+        <p class="contents-aside">Маршрут можно проходить последовательно или открыть отдельный раздел. Каждый правовой факт снабжён ссылкой на источник.</p>
+      </div>
+    </section>
+
+    <section class="article-section section-shell" id="terms" aria-labelledby="terms-title">
+      <div class="section-label"><span>01</span><span>Объект</span></div>
+      <div class="section-main">
+        <p class="kicker">Первое различие</p>
+        <h2 id="terms-title">Похожая цифровая форма.<br>Разные права.</h2>
+        <p class="section-intro">Слово «цифровой» не означает, что три инструмента устроены одинаково. Разница начинается с вопроса: <strong>кто и что должен обладателю?</strong></p>
+        <div class="asset-grid">
+          <article class="asset-card crypto">
+            <span class="asset-num">01 / цифровая валюта</span>
+            <h3>Криптовалюта</h3>
+            <p>В рассматриваемой модели это объект сделки и последующего учёта. У неё нет обязанного перед каждым обладателем лица, сопоставимого с эмитентом ЦФА. Цена может меняться независимо от того, насколько безошибочно выполнена операция.</p>
+            <a class="source-link" href="https://www.consultant.ru/document/cons_doc_LAW_540983/" target="_blank" rel="noopener noreferrer">Закон № 282-ФЗ, ст. 2 ↗</a>
+          </article>
+          <article class="asset-card dfa">
+            <span class="asset-num">02 / цифровое право</span>
+            <h3>ЦФА</h3>
+            <p>Цифровой финансовый актив удостоверяет право, указанное в решении о выпуске: например, денежное требование. Здесь важны эмитент и содержание права, а не сходство интерфейса с приложением для покупки криптовалюты.</p>
+            <a class="source-link" href="https://www.consultant.ru/document/cons_doc_LAW_540983/" target="_blank" rel="noopener noreferrer">Закон № 282-ФЗ, ст. 2 ↗</a>
+          </article>
+          <article class="asset-card ruble">
+            <span class="asset-num">03 / форма рубля</span>
+            <h3>Цифровой рубль</h3>
+            <p>Это форма национальной валюты, выпускаемая Банком России для платежей и переводов. Банк России прямо указывает: цифровой рубль не является криптовалютой.</p>
+            <a class="source-link" href="https://www.cbr.ru/faq/dr/" target="_blank" rel="noopener noreferrer">Банк России: вопросы и ответы ↗</a>
+          </article>
+        </div>
+        <p class="article-note">Дальше речь идёт именно о покупке цифровой валюты за рубли. ЦФА и цифровой рубль нужны для разграничения понятий; в путь сделки они не подставляются.</p>
+      </div>
+    </section>
+
+    <section class="article-section section-shell actors-section" id="actors" aria-labelledby="actors-title">
+      <div class="section-label"><span>02</span><span>Участники</span></div>
+      <div class="section-main">
+        <p class="kicker">Не одно приложение, а несколько ролей</p>
+        <h2 id="actors-title">Кто отвечает за какой шаг</h2>
+        <p class="section-intro">Один интерфейс может объединять услуги разных организаций. Для понимания операции полезнее смотреть на действие, статус участника и подтверждающую запись.</p>
+        <div class="roles-list">
+          <div class="role-row"><span class="role-index">01</span><h3>Банк</h3><p>Проводит рублёвую часть: счёт и перевод. Списание денег ещё не подтверждает покупку актива.</p></div>
+          <div class="role-row"><span class="role-index">02</span><h3>Брокер</h3><p>Принимает поручение инвестора и направляет его на исполнение в биржевой ветви.</p></div>
+          <div class="role-row"><span class="role-index">03</span><h3>Организатор торгов</h3><p>Применяет правила торговой системы, принимает заявки и фиксирует сделки.</p></div>
+          <div class="role-row"><span class="role-index">04</span><h3>Криптообменник</h3><p>В другой ветви сам покупает или продаёт цифровую валюту за свой счёт вне организованных торгов.</p></div>
+          <div class="role-row"><span class="role-index">05</span><h3>Цифровой депозитарий</h3><p>Оказывает услуги учёта и перехода цифровых валют либо доступа к адресам, на которых они учитываются.</p></div>
+        </div>
+        <p class="sources-inline">Основа описания ролей: <a href="https://www.consultant.ru/document/cons_doc_LAW_540983/" target="_blank" rel="noopener noreferrer">Федеральный закон № 282-ФЗ ↗</a>; <a href="https://www.cbr.ru/press/event/?id=32894" target="_blank" rel="noopener noreferrer">разъяснение Банка России о первых участниках реестров ↗</a>.</p>
+      </div>
+    </section>
+
+    <section class="route-section" id="route" aria-labelledby="route-title">
+      <div class="section-shell route-shell">
+        <div class="section-label"><span>03</span><span>Главная схема</span></div>
+        <div class="section-main">
+          <p class="kicker">Интерактивный маршрут</p>
+          <h2 id="route-title">Проследите деньги<br>и актив по отдельности</h2>
+          <p class="section-intro">Начало и конец одинаковы: рубли на банковском счёте. В середине можно выбрать один из двух способов покупки. Это типовая аналитическая схема; она не описывает работу конкретной платформы.</p>
+
+          <div class="route-selector" role="group" aria-label="Выберите способ покупки">
+            <button type="button" class="route-choice is-active" data-route="exchange" aria-pressed="true"><span class="choice-letter">А</span><span><strong>Через брокера и торги</strong><small>Заявка встречается с предложением</small></span></button>
+            <button type="button" class="route-choice" data-route="dealer" aria-pressed="false"><span class="choice-letter">Б</span><span><strong>У криптообменника</strong><small>Организация сама выступает контрагентом</small></span></button>
+          </div>
+
+          <div class="route-explorer">
+            <div class="route-rail" aria-label="Этапы маршрута">
+              <button type="button" class="step-button is-active" data-step="0" aria-current="step"><span>01</span> Проверка</button>
+              <button type="button" class="step-button" data-step="1"><span>02</span> Рубли</button>
+              <button type="button" class="step-button" data-step="2"><span>03</span> Покупка</button>
+              <button type="button" class="step-button" data-step="3"><span>04</span> Учёт</button>
+              <button type="button" class="step-button" data-step="4"><span>05</span> Продажа</button>
+              <button type="button" class="step-button" data-step="5"><span>06</span> Вывод</button>
+            </div>
+            <article class="step-detail" id="step-detail" aria-live="polite" aria-atomic="true">
+              <div class="step-detail-head"><span id="detail-counter">ШАГ 01 / 06</span><span id="detail-flow">ДО ДВИЖЕНИЯ ДЕНЕГ</span></div>
+              <h3 id="detail-title">Проверить участника и доступ</h3>
+              <p id="detail-copy">Инвестор устанавливает, с какой организацией заключает договор, а посредник проводит предусмотренную проверку клиента и допуска к операции.</p>
+              <div class="detail-columns">
+                <div><span class="detail-label">Кто действует</span><p id="detail-actor">Инвестор и посредник</p></div>
+                <div><span class="detail-label">Что проверить</span><p id="detail-check">Юридическое наименование и статус организации в реестре; условия доступа и результат требуемого тестирования.</p></div>
+              </div>
+              <div class="risk-callout"><span>РИСК ЭТАПА</span><p id="detail-risk">Подмена сайта или начало операции до завершения предусмотренной проверки.</p></div>
+              <p class="detail-source" id="detail-source"><a href="https://www.cbr.ru/admissionfinmarket/register/" target="_blank" rel="noopener noreferrer">Реестры Банка России ↗</a></p>
+              <div class="detail-controls"><button type="button" id="step-prev" disabled>← Назад</button><button type="button" id="step-next">Следующий этап →</button></div>
+            </article>
+          </div>
+          <p class="route-note" id="method"><strong>Как читать схему.</strong> «Заявка принята», «сделка заключена», «актив отражён на цифровом счёте» и «рубли поступили в банк» — разные события. Маршрут показывает их порядок, не предполагая единого интерфейса или мгновенного исполнения.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section section-shell media-section" aria-labelledby="media-title">
+      <div class="section-label"><span>↘</span><span>Пояснение</span></div>
+      <div class="section-main">
+        <p class="kicker">Видео · около минуты</p>
+        <h2 id="media-title">Почему «куплено» — не одно событие</h2>
+        <p class="section-intro">Короткая анимация повторяет основные переходы: деньги → поручение или обмен → сделка → запись об активе. Она помогает удержать последовательность перед разбором технологий.</p>
+        <figure class="video-figure">
+          <video controls preload="metadata" playsinline poster="assets/video-poster.svg" aria-describedby="video-caption">
+            <source src="assets/route-explainer.mp4" type="video/mp4">
+            <track kind="captions" src="assets/route-explainer.vtt" srclang="ru" label="Русские субтитры" default>
+            Ваш браузер не поддерживает встроенное видео. <a href="assets/route-explainer.mp4">Открыть файл видео</a>.
+          </video>
+          <figcaption id="video-caption">Авторская анимация по типовой схеме с синтезированной озвучкой и русскими субтитрами. Полный текст расположен ниже.</figcaption>
+        </figure>
+        <details class="transcript"><summary>Прочитать полный текст видео</summary>
+          <p>Инвестор начинает с рублей на банковском счёте. Банк исполняет перевод, но списание денег ещё не означает, что криптовалюта куплена.</p>
+          <p>Далее нужно проверить, что сумма отразилась как доступная для сделки у посредника. Банковский платёж и торговая заявка существуют в разных системах.</p>
+          <p>В биржевой ветви брокер передаёт заявку организатору торгов. Заявка может быть отклонена, ожидать встречного предложения или исполниться частично.</p>
+          <p>В другой ветви инвестор покупает цифровую валюту у криптообменника. Организация сама выступает контрагентом и предлагает цену или способ её определения.</p>
+          <p>После сделки требуется отдельная запись об активе. Инвестор сверяет вид и количество цифровой валюты с результатом покупки.</p>
+          <p>При продаже этапы идут в обратном направлении. Но рублёвый остаток у посредника ещё не означает завершённый вывод. Путь заканчивается после зачисления рублей банком.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="article-section section-shell" id="technology" aria-labelledby="technology-title">
+      <div class="section-label"><span>04</span><span>Технологии</span></div>
+      <div class="section-main">
+        <p class="kicker">Что скрыто за интерфейсом</p>
+        <h2 id="technology-title">У каждого сообщения<br>свой смысл</h2>
+        <p class="section-intro">Приложение может показывать единый экран, но операция проходит через несколько информационных систем. Для учебной модели полезно различать четыре потока данных.</p>
+        <div class="flow-grid">
+          <div class="flow-card"><span>01 / ЛИЧНОСТЬ</span><h3>Кто совершает действие?</h3><p>Регистрация, проверка личности и последующая аутентификация отвечают на разные вопросы. Подтверждённая при входе личность не освобождает от проверки права на конкретную операцию.</p></div>
+          <div class="flow-card"><span>02 / ПЛАТЁЖ</span><h3>Где находятся рубли?</h3><p>Списание банком и доступность суммы для покупки необходимо показывать отдельно. Платёж должен сопоставляться с нужной операцией.</p></div>
+          <div class="flow-card"><span>03 / СДЕЛКА</span><h3>Что произошло с заявкой?</h3><p>Заявка может быть отклонена, ожидать исполнения или исполниться частично. Сообщение об отправке поручения не равно подтверждённой сделке.</p></div>
+          <div class="flow-card"><span>04 / УЧЁТ</span><h3>Где запись об активе?</h3><p>После сделки инвестору нужна отдельная запись о виде и количестве приобретённой цифровой валюты и понятный способ распоряжения ею.</p></div>
+        </div>
+        <figure class="status-figure">
+          <img src="assets/status-map.svg" width="1200" height="360" loading="lazy" alt="Четыре отдельные записи: банк списал рубли, посредник отразил доступную сумму, сделка исполнена, депозитарий учёл актив">
+          <figcaption>Четыре контрольные записи в типовой модели. Каждая отвечает на свой вопрос; переход к следующей нужно проверять отдельно.</figcaption>
+        </figure>
+        <div class="tech-bottom">
+          <p>Взаимодействие систем может опираться на API и электронные сообщения. С точки зрения безопасности существенны контроль доступа к объектам, аутентификация, защита от повторного выполнения распоряжения и возможность сопоставить ответ с исходным запросом. Это <strong>архитектурная модель</strong>, а не утверждение о технологиях конкретной российской организации.</p>
+          <div class="tech-source"><span>Техническая основа</span><a href="https://www.nist.gov/publications/nist-sp-800-63b-4digital-identity-guidelines-authentication-and-authenticator" target="_blank" rel="noopener noreferrer">NIST SP 800-63B-4 ↗</a><a href="https://owasp.org/API-Security/editions/2023/en/0x00-header/" target="_blank" rel="noopener noreferrer">OWASP API Security Top 10 ↗</a></div>
+        </div>
+      </div>
+    </section>
+
+    <aside class="research-band" aria-labelledby="research-title">
+      <div class="section-shell research-inner">
+        <div class="section-label"><span>↗</span><span>Исследование</span></div>
+        <div class="section-main">
+          <p class="kicker">BIS Financial Stability Institute · 2026</p>
+          <h2 id="research-title">Почему разделение ролей важно</h2>
+          <p>Исследователи Банка международных расчётов изучили многофункциональных посредников на крипторынке. Когда одна организация совмещает торговлю, хранение клиентских активов и кредитные продукты, она принимает несколько видов риска одновременно. В исследовании рассмотрены условия услуг крупных посредников за ноябрь 2025 — март 2026 года и интервью с участниками рынка и регуляторами. Это глобальное исследование; его выводы не описывают устройство какого-либо российского сервиса.</p>
+          <div class="research-diagram" aria-label="Три вида услуг, которые может совмещать посредник"><span>Торговля</span><b aria-hidden="true">+</b><span>Хранение</span><b aria-hidden="true">+</b><span>Кредитные продукты</span><strong>→ связанные риски</strong></div>
+          <a href="https://www.bis.org/publications/fsi-paper-27-cryptoasset-service-providers-financial-intermediaries-risks-and-policy-approaches" target="_blank" rel="noopener noreferrer">Открыть исследование BIS FSI Occasional Papers 27 ↗</a>
+        </div>
+      </div>
+    </aside>
+
+    <section class="comparison-section" id="comparison" aria-labelledby="comparison-title">
+      <div class="section-shell comparison-shell">
+        <div class="section-label"><span>05</span><span>Две юрисдикции</span></div>
+        <div class="section-main">
+          <p class="kicker">Регулирование</p>
+          <h2 id="comparison-title">Россия и MiCA:<br>сравниваем роли, не смешивая правила</h2>
+          <p class="section-intro">MiCA — регламент ЕС о рынках криптоактивов. Он полезен как точка сравнения для трёх услуг: хранение, организация торгов и обмен. Российские нормы и европейские правила действуют в разных юрисдикциях. Для читателя европейские надзорные органы выпустили отдельное <a href="https://www.esma.europa.eu/sites/default/files/2025-10/Joint_ESAs_Factsheet_on_crypto-assets.pdf" target="_blank" rel="noopener noreferrer">разъяснение о том, какие услуги охватывает MiCA и какие риски сохраняются ↗</a>.</p>
+          <div class="compare-table" role="table" aria-label="Сравнение регулирования России и ЕС">
+            <div class="compare-row compare-head" role="row"><span role="columnheader">Вопрос</span><span role="columnheader">Россия</span><span role="columnheader">ЕС · MiCA</span></div>
+            <div class="compare-row" role="row"><strong role="cell">Допуск участника</strong><span role="cell">Для цифровых депозитариев и криптообменников предусмотрены реестры Банка России.</span><span role="cell">Поставщики услуг с криптоактивами проходят авторизацию; сведения о них публикуются в реестре ESMA.</span></div>
+            <div class="compare-row" role="row"><strong role="cell">Организация торгов</strong><span role="cell">Биржа согласует правила; Банк России сообщил о возможности запуска торгов с 22.11.2026.</span><span role="cell">Статья 76 требует ясных правил и процедур упорядоченной торговли.</span></div>
+            <div class="compare-row" role="row"><strong role="cell">Обмен с контрагентом</strong><span role="cell">Криптообменник может покупать и продавать за свой счёт вне организованных торгов.</span><span role="cell">Статья 77 требует публиковать твёрдую цену или способ её определения.</span></div>
+            <div class="compare-row" role="row"><strong role="cell">Хранение и учёт</strong><span role="cell">Цифровой депозитарий оказывает предусмотренные законом услуги учёта и перехода.</span><span role="cell">Статья 75 устанавливает правила хранения и ведения клиентских позиций.</span></div>
+          </div>
+          <p class="sources-inline">Проверить нормы: <a href="https://www.cbr.ru/develop/cryptocurrency/" target="_blank" rel="noopener noreferrer">Банк России: запуск рынка ↗</a>; <a href="https://www.cbr.ru/press/event/?id=32972" target="_blank" rel="noopener noreferrer">торги с 22 ноября ↗</a>; <a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-75-providing-custody-and" target="_blank" rel="noopener noreferrer">MiCA, ст. 75 ↗</a>; <a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-76-operation-trading-platform-crypto" target="_blank" rel="noopener noreferrer">ст. 76 ↗</a>; <a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-77-exchange-crypto-assets-funds-or" target="_blank" rel="noopener noreferrer">ст. 77 ↗</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-section section-shell" id="cases" aria-labelledby="cases-title">
+      <div class="section-label"><span>06</span><span>Практика</span></div>
+      <div class="section-main">
+        <p class="kicker">Документированные случаи</p>
+        <h2 id="cases-title">Что уже можно проверить<br>по официальным данным</h2>
+        <div class="case-grid">
+          <article class="case-card">
+            <div class="case-top"><span>Россия</span><time datetime="2026-10-06">06.10.2026</time></div>
+            <h3>Первые записи в реестрах</h3>
+            <p>Банк России сообщил о внесении пяти цифровых депозитариев и четырёх криптообменников в соответствующие реестры. Это конкретный факт допуска организаций. Из него нельзя делать вывод, что существует один массовый сервис, объединяющий весь путь инвестора.</p>
+            <a href="https://www.cbr.ru/press/event/?id=32894" target="_blank" rel="noopener noreferrer">Открыть сообщение Банка России ↗</a>
+          </article>
+          <article class="case-card">
+            <div class="case-top"><span>Австрия · ЕС</span><time datetime="2025-04-10">10.04.2025</time></div>
+            <h3>Авторизация поставщика услуг</h3>
+            <p>Австрийский регулятор FMA сообщил об авторизации Bitpanda GmbH в рамках MiCA и перечислил разрешённые виды услуг, в том числе хранение, обмен и исполнение поручений. Это пример того, как проверять <em>юридическое лицо и перечень услуг</em>, а не полагаться только на бренд.</p>
+            <a href="https://www.fma.gv.at/zulassungserteilung-bitpanda-gmbh/" target="_blank" rel="noopener noreferrer">Открыть сообщение FMA ↗</a>
+          </article>
+        </div>
+        <div class="case-check">
+          <span class="case-check-icon" aria-hidden="true">↗</span>
+          <div><h3>Самостоятельная проверка</h3><p>Для российского участника откройте реестры Банка России; для поставщика услуг в ЕС — реестр ESMA или сайт национального регулятора. Сверяйте юридическое наименование и именно ту услугу, которую собираетесь использовать.</p><div><a href="https://www.cbr.ru/admissionfinmarket/register/" target="_blank" rel="noopener noreferrer">Реестры Банка России ↗</a><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="noopener noreferrer">Реестр MiCA на сайте ESMA ↗</a><a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-109-register-crypto-asset-white" target="_blank" rel="noopener noreferrer">MiCA, ст. 109 ↗</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="conclusion-section" id="conclusion" aria-labelledby="conclusion-title">
+      <div class="section-shell conclusion-shell">
+        <div class="section-label"><span>07</span><span>Итог</span></div>
+        <div class="section-main">
+          <p class="kicker">Главный вывод</p>
+          <h2 id="conclusion-title">Одной кнопки «Купить»<br>недостаточно, чтобы понять сделку</h2>
+          <p>На пути инвестора последовательно возникают разные подтверждения: личность проверена, рубли поступили, поручение принято, сделка исполнена, актив учтён. При продаже цепочка завершается только после фактического зачисления рублей на банковский счёт. Для каждого перехода нужно понимать, какая организация действует и какую запись можно проверить.</p>
+          <div class="takeaways">
+            <div><span>01</span><p>Проверьте юридическое лицо и его статус.</p></div>
+            <div><span>02</span><p>Не путайте списание рублей с покупкой и зачислением актива.</p></div>
+            <div><span>03</span><p>Отделяйте операционные ошибки от риска изменения рыночной цены.</p></div>
+          </div>
+          <p class="conclusion-small">Материал носит учебный характер и не является рекомендацией покупать цифровые валюты. Аналитическая схема показывает роли и контрольные точки, а не возможности конкретной площадки.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources-section section-shell" id="sources" aria-labelledby="sources-title">
+      <div class="section-label"><span>↗</span><span>Проверка фактов</span></div>
+      <div class="section-main">
+        <p class="kicker">Ссылки и материалы</p>
+        <h2 id="sources-title">Источники</h2>
+        <p class="sources-intro">Использованы официальные документы и сообщения регуляторов, а также профильные материалы по цифровой идентификации и безопасности API. Ссылки проверены 17 ноября 2026 года. Веб-версия основана на ранее подготовленном реферате; сведения о текущем состоянии рынка обновлены отдельно.</p>
+        <ol class="bibliography">
+          <li><a href="https://www.consultant.ru/document/cons_doc_LAW_540983/" target="_blank" rel="noopener noreferrer">Федеральный закон от 04.08.2026 № 282-ФЗ «О цифровых валютах и цифровых правах»</a><span>Текст закона · КонсультантПлюс</span></li>
+          <li><a href="https://www.cbr.ru/develop/cryptocurrency/" target="_blank" rel="noopener noreferrer">Запуск рынка криптовалют</a><span>Банк России · нормативные акты и ответы на вопросы</span></li>
+          <li><a href="https://www.cbr.ru/press/event/?id=32894" target="_blank" rel="noopener noreferrer">Банк России допустил первые цифровые депозитарии и криптообменники к работе на финансовом рынке</a><span>Банк России · 06.10.2026</span></li>
+          <li><a href="https://www.cbr.ru/press/event/?id=32972" target="_blank" rel="noopener noreferrer">Как проводить торги с криптовалютами: указание Банка России</a><span>Банк России · 11.11.2026</span></li>
+          <li><a href="https://www.cbr.ru/faq/dr/" target="_blank" rel="noopener noreferrer">Цифровой рубль: что это такое и как им пользоваться</a><span>Банк России · ответы на вопросы</span></li>
+          <li><a href="https://www.cbr.ru/admissionfinmarket/register/" target="_blank" rel="noopener noreferrer">Реестры и перечни</a><span>Банк России · проверка участников</span></li>
+          <li><a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-75-providing-custody-and" target="_blank" rel="noopener noreferrer">MiCA, статья 75: хранение криптоактивов</a><span>ESMA · текст нормы</span></li>
+          <li><a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-76-operation-trading-platform-crypto" target="_blank" rel="noopener noreferrer">MiCA, статья 76: работа торговой платформы</a><span>ESMA · текст нормы</span></li>
+          <li><a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-77-exchange-crypto-assets-funds-or" target="_blank" rel="noopener noreferrer">MiCA, статья 77: обмен криптоактивов</a><span>ESMA · текст нормы</span></li>
+          <li><a href="https://www.esma.europa.eu/publications-and-data/interactive-single-rulebook/mica/article-109-register-crypto-asset-white" target="_blank" rel="noopener noreferrer">MiCA, статья 109: реестр поставщиков услуг</a><span>ESMA · текст нормы</span></li>
+          <li><a href="https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica" target="_blank" rel="noopener noreferrer">Markets in Crypto-Assets Regulation (MiCA): Interim MiCA Register</a><span>ESMA · реестр поставщиков услуг</span></li>
+          <li><a href="https://www.fma.gv.at/zulassungserteilung-bitpanda-gmbh/" target="_blank" rel="noopener noreferrer">Zulassungserteilung Bitpanda GmbH</a><span>FMA Österreich · 10.04.2025</span></li>
+          <li><a href="https://www.nist.gov/publications/nist-sp-800-63b-4digital-identity-guidelines-authentication-and-authenticator" target="_blank" rel="noopener noreferrer">NIST SP 800-63B-4: Authentication and Authenticator Management</a><span>NIST · 2025</span></li>
+          <li><a href="https://owasp.org/API-Security/editions/2023/en/0x00-header/" target="_blank" rel="noopener noreferrer">OWASP API Security Top 10 — 2023</a><span>OWASP Foundation · технический справочник</span></li>
+          <li><a href="https://www.bis.org/publications/fsi-paper-27-cryptoasset-service-providers-financial-intermediaries-risks-and-policy-approaches" target="_blank" rel="noopener noreferrer">Cryptoasset service providers as financial intermediaries: risks and policy approaches</a><span>BIS FSI Occasional Papers 27 · 23.04.2026</span></li>
+          <li><a href="https://www.esma.europa.eu/sites/default/files/2025-10/Joint_ESAs_Factsheet_on_crypto-assets.pdf" target="_blank" rel="noopener noreferrer">Crypto-assets explained: What MiCA means for you as a consumer</a><span>Европейские надзорные органы · 2025</span></li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="section-shell footer-inner"><span>МАРШРУТ АКТИВА</span><p>Учебный мультимедийный лонгрид · 2026</p><a href="#top">Наверх ↑</a></div>
+  </footer>
+</body>
+</html>
